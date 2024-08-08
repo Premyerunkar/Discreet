@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/backround"
+    android:layout_width="match_parent"
+    android:layout_height="200mm"
+    tools:context=".MockLogin">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_margin="22dp"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Session Name"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.242" />
+
+
+    <pl.droidsonroids.gif.GifTextView
+        android:id="@+id/logo"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/animation"
+        app:layout_constraintBottom_toBottomOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.779"
+        tools:ignore="NotSibling" />
+
+    <EditText
+        android:id="@+id/username_input"
+        android:hint="username"
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/text"
+        android:layout_margin="22dp"
+        android:layout_width="match_parent"
+        android:textColorHint="@color/black"
+        android:layout_height="32dp"
+        tools:ignore="TextFields,UnknownId" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:background="@drawable/button_border"
+        android:text="Recieve"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/username_input"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/text"
+        app:layout_constraintTop_toBottomOf="@+id/username_input"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <Button
+        android:id="@+id/login_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:background="@drawable/button_border"
+        android:text="Call"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn"
+        app:layout_constraintEnd_toEndOf="@+id/username_input"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <TextView
+        android:id="@+id/Note"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:text="Note:"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/text"
+        app:layout_constraintTop_toBottomOf="@id/login_btn2" />
+
+    <TextView
+        android:id="@+id/Notice"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        android:text="1.To Recieve a call you need to Enter a Session name "
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/text"
+        app:layout_constraintTop_toBottomOf="@id/Note" />
+
+    <TextView
+        android:id="@+id/Notice1"
+        android:layout_width="wrap_content"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"
+        android:text="2.Click on call if you want to call"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/text"
+        app:layout_constraintTop_toBottomOf="@id/Notice" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

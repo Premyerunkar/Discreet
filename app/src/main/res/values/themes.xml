@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CallMe" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/black</item> <!-- Example customization -->
+        <item name="colorOnPrimary">@color/white</item> <!-- Example customization -->
+    </style>
+
+    <style name="Theme.TransparentStatusBar" parent="Base.Theme.CallMe">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.VideoCall" parent="Base.Theme.CallMe">
+        <item name="android:statusBarColor">#185E9C</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="Theme.CallMe" parent="Base.Theme.CallMe" />
+</resources>
