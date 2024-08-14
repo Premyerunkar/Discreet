@@ -42,7 +42,7 @@ class SplashActivity : AppCompatActivity() {
 
         // Delay for 3 seconds and then start MockLogin activity
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MockLogin::class.java))
+            startActivity(Intent(this, IntroActivity::class.java))
             finish()
         }, 3000)
     }

@@ -3,25 +3,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@drawable/backround"
+    android:background="@color/white"
     android:layout_width="match_parent"
-    android:layout_height="200mm"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/crd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="15dp"
+        android:layout_marginEnd="18dp"
+        android:textSize="46sp"
+        android:textColor="@color/black"
+        android:text="Discreet"
+        android:id="@id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:elevation="15dp"
+        android:id="@+id/logo"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/protection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/text"
+        app:layout_constraintBottom_toBottomOf="@id/crd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crd"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:backgroundTint="#E2E248"
+        app:cardElevation="12dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-59dp"
+        tools:layout_editor_absoluteY="-36dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:backgroundTint="#E2E248"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/curent_username_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello!"
-        android:textColor="@color/white"
-        android:textSize="32dp"
+        android:textColor="@color/black"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193" />
+        app:layout_constraintVertical_bias="0.279" />
 
     <TextView
         android:id="@+id/curent_username_textview2"
@@ -29,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Let's have a Call!"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.16"
@@ -65,7 +111,7 @@
         app:layout_constraintStart_toStartOf="@+id/pc"
         app:layout_constraintEnd_toEndOf="@+id/pc"
         android:text="Voice Call"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/voice_call_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -85,7 +131,7 @@
         app:layout_constraintEnd_toEndOf="@+id/vc"
         app:layout_constraintStart_toStartOf="@+id/vc"
         android:text="Video Call"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/voice_call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -115,7 +161,7 @@
         android:layout_margin="32dp"
         android:background="@drawable/button_border"
         android:text="Back"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

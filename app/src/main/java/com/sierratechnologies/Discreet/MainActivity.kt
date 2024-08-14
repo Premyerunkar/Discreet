@@ -9,7 +9,9 @@ import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.widget.addTextChangedListener
 import com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
 import com.zegocloud.uikit.service.defines.ZegoUIKitUser
@@ -23,13 +25,16 @@ class MainActivity : AppCompatActivity() {
     lateinit var backButton:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        window.statusBarColor = android.graphics.Color.TRANSPARENT
-        window.decorView.systemUiVisibility = android.view.View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
-                android.view.View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        WindowInsetsControllerCompat(window, window.decorView).apply {
+            isAppearanceLightStatusBars = true // Optional: set to false if you want white icons
+            window.statusBarColor = 0xFFDBDB50.toInt() // Convert hex color to int
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -38,6 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         //Back
         var backButton=findViewById<Button>(R.id.back)
+
 
         backButton.setOnClickListener{
             val intent=Intent(this@MainActivity,MockLogin::class.java)
